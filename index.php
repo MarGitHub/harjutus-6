@@ -64,12 +64,12 @@
 		
 	?><br>
 	
-	<?php $age=17?>
-	<?php $age_limit=18?>
+	<?php $age=17; ?>
+	<?php $age_limit=18; ?>
 	
 	<?php 
 	if ($age < $age_limit) { 
-	echo "Kahjuks olete liiga noor. Te peate olema vähemalt {$age_limit} aastat vana. Tulge " . $age_limit - $age . "aasta pärast tagasi"; }
+	echo "Kahjuks olete liiga noor. Te peate olema vähemalt {$age_limit} aastat vana. Tulge " . ($age_limit - $age) . " aasta pärast tagasi"; }
 	elseif ($age > $age_limit) {
 	echo "Olete piisavalt vana. Tulge edasi!";
 	}
