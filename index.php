@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>
-	harjtus-3s - PHP põhitõed
+	harjtus 6
 	</title>
 </head>
 
@@ -79,7 +79,64 @@
 	
 	?>
 	
-
+	<?php $a=3 ?><br>
+	<?php $b=3 ?><br>
+	<?php $c=4 ?><br>
+	<?php $d=5 ?><br>
+	
+	<?php
+    if (($a == $b) && ($c > $d)) {
+	echo "Mõlemad on õiged";
+	}
+	elseif ($c > $d) {
+	echo "4 on suurem kui viis";
+	}
+	elseif ($a == $b) {
+	echo "3 = 3";
+	}
+	/*Käivitati kolmas koodiplokk "3=3", kuna kumbki eelnevatest tehetest ei olnud tõene*/
+	?> 
+<br>
+	<?php
+    if (($a == $b) || ($c > $d)) {
+	echo "Esimene on õige";
+	}
+	elseif ($c > $d) {
+	echo "4 on suurem kui 5";
+	}
+	elseif ($a == $b) {
+	echo "3 = 3";}
+	/*Käivitati esimene koodiplokk, kuna üks tehetest on tõene.*/
+	?> 
+	<br>
+	<?php
+	if (isset($nothing) == false) {
+	echo "False";
+	} ?>
+	<br>
+	<?php if (!isset($nothing) == true){
+	echo "True";	
+	}
+	?>
+	
+	<h3>Switch</h3>
+	
+	<?php $current_language="ru" ?>
+	
+	<?php switch($current_language) {
+	case "et":
+		echo "Tere! Kuidas sul läheb? ";
+		break; 
+	case "ru":
+		echo "Здравствуйте! Как вы делаете? "; 
+		break; 
+	case "fi":
+		echo "Hei! Miten menee? "; 
+		break; 
+	default:
+		echo "Hello! How are you doing?"; 
+		break; 
+	}?>
 </body>
 
 </html>
